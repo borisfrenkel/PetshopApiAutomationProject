@@ -11,8 +11,9 @@ Junit 5 - test runner and assertions
 Apache HttpClient 5 - http requests
 FasterXML Jackson - Json files parsing
 
-###Test cases:
-####**callFindByStatusApiWithStatusEqAvailableVerifyResponseBody**
+Test cases:
+
+#**callFindByStatusApiWithStatusEqAvailableVerifyResponseBody**
 
 **Steps:**
 Call findByStatus API with input status=available, and receive a response
@@ -23,7 +24,7 @@ Extract all nodes that include Lion from response bodies
 **Expected results:**
 Responses should include nodes with Lion
 
-####**callFindByStatusApiWithStatusEqAvailableVerifyHttpStatus**
+#**callFindByStatusApiWithStatusEqAvailableVerifyHttpStatus**
 
 **Steps:**
 Call findByStatus API with input status=available, and receive a response
@@ -31,7 +32,7 @@ Call findByStatus API with input status=available, and receive a response
 **Expected results:**
 Response should include SC_OK status
 
-####**callFindByStatusApiWithStatusEqPendingVerifyHttpStatus**
+#**callFindByStatusApiWithStatusEqPendingVerifyHttpStatus**
 
 **Steps:**
 Call findByStatus API with input status=pending, and receive a response
@@ -39,7 +40,7 @@ Call findByStatus API with input status=pending, and receive a response
 **Expected results:**
 Response should include SC_OK status
 
-####**callFindByStatusApiWithStatusEqSoldVerifyHttpStatus**
+#**callFindByStatusApiWithStatusEqSoldVerifyHttpStatus**
 
 **Steps:**
 Call findByStatus API with input status=sold, and receive a response
@@ -47,7 +48,7 @@ Call findByStatus API with input status=sold, and receive a response
 **Expected results:**
 Response should include SC_OK status
 
-####**callFindByStatusApiWithInputParameterEqNullVerifyHttpStatus**
+#**callFindByStatusApiWithInputParameterEqNullVerifyHttpStatus**
 
 **Steps:**
 Call findByStatus API with input status=null, and receive a response
