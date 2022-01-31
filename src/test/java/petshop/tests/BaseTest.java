@@ -7,14 +7,12 @@ import org.junit.jupiter.api.extension.AfterTestExecutionCallback;
 import org.junit.jupiter.api.extension.ExtensionContext;
 import petshop.helpers.HTTPClientHelper;
 import petshop.helpers.JSONHelper;
-
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class BaseTest implements AfterTestExecutionCallback {
     protected HTTPClientHelper httpClientHelper;
     protected JSONHelper jsonHelper;
-    // assumes the current class is called MyLogger
     protected static Logger LOGGER = null;
 
     @BeforeAll
