@@ -14,7 +14,7 @@ FasterXML Jackson - Json files parsing
 
 Test cases:
 
-#**callFindByStatusApiWithStatusEqAvailableVerifyResponseBody**
+**callFindByStatusApiWithStatusEqAvailableVerifyResponseBody**
 
 **Steps:**
 Call findByStatus API with input status=available, and receive a response
@@ -25,7 +25,7 @@ Extract all nodes that include Lion from response bodies
 **Expected results:**
 Responses should include nodes with Lion
 
-#**callFindByStatusApiWithStatusEqAvailableVerifyHttpStatus**
+**callFindByStatusApiWithStatusEqAvailableVerifyHttpStatus**
 
 **Steps:**
 Call findByStatus API with input status=available, and receive a response
