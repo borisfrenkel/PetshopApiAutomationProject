@@ -18,9 +18,9 @@ public class HTTPClientHelper {
         LOGGER = logger;
     }
 
-    public CloseableHttpResponse Get(String URL, String inputParameters) throws IOException {
+    public CloseableHttpResponse Get(String URL, String apiName, String inputParameters) throws IOException {
         try (CloseableHttpClient httpClient = HttpClients.createDefault()) {
-            final HttpGet httpGet = new HttpGet(URL + "?" + inputParameters);
+            final HttpGet httpGet = new HttpGet(URL + apiName + "?" + inputParameters);
 
             long startTime = System.nanoTime();
             CloseableHttpResponse response = httpClient.execute(httpGet);
@@ -33,8 +33,8 @@ public class HTTPClientHelper {
         }
     }
 
-    public String getResponseBody(String URL, String inputParameters) throws IOException, ParseException {
-        try(CloseableHttpResponse response = Get(URL, inputParameters)){
+    public String getResponseBody(String URL, String apiName, String inputParameters) throws IOException, ParseException {
+        try(CloseableHttpResponse response = Get(URL, apiName, inputParameters)){
             return EntityUtils.toString(response.getEntity(), StandardCharsets.UTF_8);
         }
     }

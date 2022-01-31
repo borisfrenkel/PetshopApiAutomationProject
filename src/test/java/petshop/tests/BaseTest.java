@@ -24,7 +24,7 @@ public class BaseTest implements AfterTestExecutionCallback {
     public void beforeAll() throws IOException {
         LOGGER = Logger.getLogger(this.getClass().getName());
         httpClientHelper = new HTTPClientHelper(LOGGER);
-        jsonHelper = new JSONHelper();
+        jsonHelper = new JSONHelper(LOGGER);
 
         final String dir = System.getProperty("user.dir");
         Properties properties = new Properties();

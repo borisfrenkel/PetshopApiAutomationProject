@@ -13,38 +13,38 @@ import java.util.ArrayList;
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public class FindByStatusTests extends BaseTest {
     @Test
+    public void callFindByStatusApiWithStatusEqAvailableVerifyResponseBody() throws IOException, ParseException {
+        String jsonResponseBodyString = httpClientHelper.getResponseBody(URL, "findByStatus", "status=available");
+        ArrayList<JsonNode> lionsList = jsonHelper.getJsonObjectFilteredByName(jsonResponseBodyString, "Lion");
+
+        Assertions.assertTrue(lionsList.size() > 0, "Test failed. findByStatus didn't find available Lions");
+    }
+
+    @Test
     public void callFindByStatusApiWithStatusEqAvailableVerifyHttpStatus() throws IOException {
-        CloseableHttpResponse response = httpClientHelper.Get(URL, "status=available");
+        CloseableHttpResponse response = httpClientHelper.Get(URL, "findByStatus", "status=available");
 
         Assertions.assertEquals(HttpStatus.SC_OK, response.getCode(), "Test failed. findByStatus API response is " + response.getCode() + " and not SC_OK as expected");
     }
 
     @Test
     public void callFindByStatusApiWithStatusEqPendingVerifyHttpStatus() throws IOException {
-        CloseableHttpResponse response = httpClientHelper.Get(URL, "status=pending");
+        CloseableHttpResponse response = httpClientHelper.Get(URL, "findByStatus", "status=pending");
 
         Assertions.assertEquals(HttpStatus.SC_OK, response.getCode(), "Test failed. findByStatus API response is " + response.getCode() + " and not SC_OK as expected");
     }
 
     @Test
     public void callFindByStatusApiWithStatusEqSoldVerifyHttpStatus() throws IOException {
-        CloseableHttpResponse response = httpClientHelper.Get(URL, "status=sold");
+        CloseableHttpResponse response = httpClientHelper.Get(URL, "findByStatus", "status=sold");
 
         Assertions.assertEquals(HttpStatus.SC_OK, response.getCode(), "Test failed. findByStatus API response is " + response.getCode() + " and not SC_OK as expected");
     }
 
     @Test
     public void callFindByStatusApiWithInputParameterEqNullVerifyHttpStatus() throws IOException {
-        CloseableHttpResponse response = httpClientHelper.Get(URL, null);
+        CloseableHttpResponse response = httpClientHelper.Get(URL, "findByStatus", null);
 
         Assertions.assertEquals(HttpStatus.SC_BAD_REQUEST, response.getCode(), "Test failed. findByStatus API response is " + response.getCode() + " and not SC_BAD_REQUEST as expected");
-    }
-
-    @Test
-    public void callFindByStatusApiWithStatusEqAvailableVerifyResponseBody() throws IOException, ParseException {
-        String jsonResponseBodyString = httpClientHelper.getResponseBody(URL, "status=available");
-        ArrayList<JsonNode> lionsList = jsonHelper.getJsonObjectFilteredByName(jsonResponseBodyString, "Lion");
-
-        Assertions.assertTrue(lionsList.size() > 0, "Test failed. findByStatus didn't find available Lions");
     }
 }

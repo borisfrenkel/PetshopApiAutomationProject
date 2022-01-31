@@ -12,35 +12,45 @@ Apache HttpClient 5 - http requests
 FasterXML Jackson - Json files parsing
 
 ###Test cases:
-####**callFindByStatusApiWithStatusEqAvailableVerifyHttpStatus**
-**Steps:**
-Call findByStatus API with input status=available, and receive a response
-**Expected results:**
-Response should include SC_OK status
-
-####**callFindByStatusApiWithStatusEqPendingVerifyHttpStatus**
-**Steps:**
-Call findByStatus API with input status=pending, and receive a response
-**Expected results:**
-Response should include SC_OK status
-
-####**callFindByStatusApiWithStatusEqSoldVerifyHttpStatus**
-**Steps:**
-Call findByStatus API with input status=sold, and receive a response
-**Expected results:**
-Response should include SC_OK status
-
-####**callFindByStatusApiWithInputParameterEqNullVerifyHttpStatus**
-**Steps:**
-Call findByStatus API with input status=null, and receive a response
-**Expected results:**
-Response should include SC_BAD_REQUEST status
-
 ####**callFindByStatusApiWithStatusEqAvailableVerifyResponseBody**
+
 **Steps:**
 Call findByStatus API with input status=available, and receive a response
 Call findByStatus API with input status=pending, and receive a response
 Call findByStatus API with input status=sold, and receive a response
 Extract all nodes that include Lion from response bodies
+
 **Expected results:**
 Responses should include nodes with Lion
+
+####**callFindByStatusApiWithStatusEqAvailableVerifyHttpStatus**
+
+**Steps:**
+Call findByStatus API with input status=available, and receive a response
+
+**Expected results:**
+Response should include SC_OK status
+
+####**callFindByStatusApiWithStatusEqPendingVerifyHttpStatus**
+
+**Steps:**
+Call findByStatus API with input status=pending, and receive a response
+
+**Expected results:**
+Response should include SC_OK status
+
+####**callFindByStatusApiWithStatusEqSoldVerifyHttpStatus**
+
+**Steps:**
+Call findByStatus API with input status=sold, and receive a response
+
+**Expected results:**
+Response should include SC_OK status
+
+####**callFindByStatusApiWithInputParameterEqNullVerifyHttpStatus**
+
+**Steps:**
+Call findByStatus API with input status=null, and receive a response
+
+**Expected results:**
+Response should include SC_BAD_REQUEST status
