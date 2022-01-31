@@ -1,12 +1,13 @@
-##**PetshopApiAutomationProject**
-###How to run:
+**PetshopApiAutomationProject**
+
+How to run:
 1. Install Java version 1.5 or higher and add it to Path variable
 2. Install maven and add it to Path variable
 3. Open Command Prompt window
 4. Change directory to PetshopApiAutomationProject
 5. Run "mvn clean test" command
 
-###Dependencies:
+Dependencies:
 Junit 5 - test runner and assertions
 Apache HttpClient 5 - http requests
 FasterXML Jackson - Json files parsing
@@ -32,7 +33,7 @@ Call findByStatus API with input status=available, and receive a response
 **Expected results:**
 Response should include SC_OK status
 
-#**callFindByStatusApiWithStatusEqPendingVerifyHttpStatus**
+**callFindByStatusApiWithStatusEqPendingVerifyHttpStatus**
 
 **Steps:**
 Call findByStatus API with input status=pending, and receive a response
@@ -40,7 +41,7 @@ Call findByStatus API with input status=pending, and receive a response
 **Expected results:**
 Response should include SC_OK status
 
-#**callFindByStatusApiWithStatusEqSoldVerifyHttpStatus**
+**callFindByStatusApiWithStatusEqSoldVerifyHttpStatus**
 
 **Steps:**
 Call findByStatus API with input status=sold, and receive a response
@@ -48,7 +49,7 @@ Call findByStatus API with input status=sold, and receive a response
 **Expected results:**
 Response should include SC_OK status
 
-#**callFindByStatusApiWithInputParameterEqNullVerifyHttpStatus**
+**callFindByStatusApiWithInputParameterEqNullVerifyHttpStatus**
 
 **Steps:**
 Call findByStatus API with input status=null, and receive a response
