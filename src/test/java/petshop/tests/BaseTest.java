@@ -6,7 +6,6 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.TestInfo;
 import petshop.helpers.HTTPClientHelper;
 import petshop.helpers.JSONHelper;
-
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
