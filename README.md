@@ -7,10 +7,15 @@ How to run:
 4. Change directory to PetshopApiAutomationProject
 5. Run "mvn clean test" command
 
+
 Dependencies:
+
 Junit 5 - test runner and assertions
+
 Apache HttpClient 5 - http requests
+
 FasterXML Jackson - Json files parsing
+
 
 Test cases:
 
@@ -25,6 +30,7 @@ Extract all nodes that include Lion from response bodies
 **Expected results:**
 Responses should include nodes with Lion
 
+
 **callFindByStatusApiWithStatusEqAvailableVerifyHttpStatus**
 
 **Steps:**
@@ -32,6 +38,7 @@ Call findByStatus API with input status=available, and receive a response
 
 **Expected results:**
 Response should include SC_OK status
+
 
 **callFindByStatusApiWithStatusEqPendingVerifyHttpStatus**
 
@@ -41,6 +48,7 @@ Call findByStatus API with input status=pending, and receive a response
 **Expected results:**
 Response should include SC_OK status
 
+
 **callFindByStatusApiWithStatusEqSoldVerifyHttpStatus**
 
 **Steps:**
@@ -48,6 +56,7 @@ Call findByStatus API with input status=sold, and receive a response
 
 **Expected results:**
 Response should include SC_OK status
+
 
 **callFindByStatusApiWithInputParameterEqNullVerifyHttpStatus**
 
