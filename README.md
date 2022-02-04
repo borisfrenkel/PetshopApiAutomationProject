@@ -1,5 +1,12 @@
 **PetshopApiAutomationProject**
 
+2/4/2022 Update:
+Adding surefire-report
+To generate surefire HTML report:
+open command line under PetshopApiAutomationProject
+run mvn surefire-report:report
+find the report under PetshopApiAutomationProject\target\site
+
 How to run:
 1. Install Java version 1.5 or higher and add it to Path variable
 2. Install maven and add it to Path variable
