@@ -1,5 +1,11 @@
 **PetshopApiAutomationProject**
 
+2/8/2022 Update:
+Adding 
+To open report in default Web browser:
+open command line under PetshopApiAutomationProject
+run mvn allure:serve
+
 2/4/2022 Update:
 Adding surefire-report
 To generate surefire HTML report:
